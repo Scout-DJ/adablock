@@ -15,30 +15,27 @@ YouTube wages an ongoing war against ad blockers. They constantly rotate class n
 AdaBlock fights back with an **adaptive loop**:
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                    AdaBlock Architecture                 │
-│                                                         │
-│  ┌──────────┐    ┌───────────┐    ┌──────────────────┐  │
-│  │ Monitor  │───▶│ Analyzer  │───▶│   Publisher       │  │
-│  │ (agent)  │    │ (diffing) │    │ (Nostr signing)   │  │
-│  └──────────┘    └───────────┘    └────────┬─────────┘  │
-│       ▲                                     │            │
-│       │              Nostr Relays            ▼            │
-│       │         ┌─────────────────────────────┐          │
-│       │         │  relay.substation.ninja      │          │
-│       │         │  relay.damus.io              │          │
-│       │         │  nos.lol                     │          │
-│       │         └──────────────┬──────────────┘          │
-│       │                        │                         │
-│       │                        ▼                         │
-│  ┌────┴───────────────────────────────────┐              │
-│  │        Browser Extension (MV3)         │              │
-│  │  ┌────────┐ ┌─────────┐ ┌───────────┐ │              │
-│  │  │Network │ │Cosmetic │ │  Script   │ │              │
-│  │  │ Rules  │ │ Filters │ │ Injector  │ │              │
-│  │  └────────┘ └─────────┘ └───────────┘ │              │
-│  └────────────────────────────────────────┘              │
-└─────────────────────────────────────────────────────────┘
+         ┌───────────┐   ┌───────────┐   ┌───────────────┐
+         │  Monitor  │──▶│ Analyzer  │──▶│   Publisher   │
+         │  (agent)  │   │ (diffing) │   │(Nostr signing)│
+         └───────────┘   └───────────┘   └───────┬───────┘
+               ▲                                  │
+               │                                  ▼
+               │          ┌───────────────────────────┐
+               │          │       Nostr Relays        │
+               │          │  relay.substation.ninja    │
+               │          │  relay.damus.io · nos.lol  │
+               │          └─────────────┬─────────────┘
+               │                        │
+               │                        ▼
+         ┌─────┴──────────────────────────────────┐
+         │       Browser Extension (MV3)          │
+         │                                        │
+         │  ┌─────────┐ ┌─────────┐ ┌──────────┐ │
+         │  │ Network │ │Cosmetic │ │  Script  │ │
+         │  │  Rules  │ │ Filters │ │ Injector │ │
+         │  └─────────┘ └─────────┘ └──────────┘ │
+         └────────────────────────────────────────┘
 ```
 
 1. **Monitor** — Continuously tests current filters against live YouTube

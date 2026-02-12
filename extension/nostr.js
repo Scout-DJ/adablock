@@ -17,7 +17,7 @@ const NOSTR_CONFIG = {
   ],
   // Trusted pubkey for AdaBlock filter updates (hex)
   // Replace with your actual pubkey after generating keypair
-  trustedPubkey: 'REPLACE_WITH_ADABLOCK_PUBKEY_HEX',
+  trustedPubkey: 'f4f187bed7031cc21b74a8c0b7f105b7409aaeced3d9ebddc9b1ba7c70d39ee3',
   filterKind: 30078,
   dTag: 'adablock-filters',
   reconnectInterval: 30000,

@@ -1,38 +1,33 @@
 {
   "name": "adablock",
   "version": "1.0.0",
-  "description": "AdaBlock agent skill — monitors YouTube ad infrastructure and generates adaptive filter updates",
-
+  "description": "AdaBlock agent skill \u2014 monitors YouTube ad infrastructure and generates adaptive filter updates",
   "relays": [
     "wss://relay.substation.ninja",
     "wss://relay.damus.io",
     "wss://nos.lol",
     "wss://relay.nostr.band"
   ],
-
   "check_interval_minutes": 60,
   "max_retries": 3,
   "retry_delay_seconds": 30,
-
-  "trusted_pubkeys": [],
-
+  "trusted_pubkeys": [
+    "f4f187bed7031cc21b74a8c0b7f105b7409aaeced3d9ebddc9b1ba7c70d39ee3"
+  ],
   "nostr_keypair": {
     "description": "Generate with: python -c \"from publisher import generate_keypair; generate_keypair()\"",
     "private_key_hex": "GENERATE_ME",
     "public_key_hex": "GENERATE_ME"
   },
-
   "youtube_endpoints": [
     "https://www.youtube.com",
     "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "https://www.youtube.com/results?search_query=test"
   ],
-
   "known_ad_scripts": [
     "https://www.youtube.com/s/desktop/*/jsbin/desktop_polymer.vflset/desktop_polymer.js",
     "https://www.youtube.com/s/player/*/player_ias.vflset/*/base.js"
   ],
-
   "ad_indicators": {
     "css_classes": [
       "ad-showing",
@@ -53,7 +48,6 @@
       "allow youtube ads"
     ]
   },
-
   "output_dir": "./output",
   "cache_dir": "./cache",
   "log_dir": "./logs"

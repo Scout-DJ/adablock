@@ -1,0 +1,42 @@
+{
+  "name": "YouTube Script Injection Rules",
+  "version": "1.0.0",
+  "updated": "2026-02-12T00:00:00Z",
+  "rules": [
+    {
+      "id": "script-skip-ad-button",
+      "name": "Auto-click skip button",
+      "enabled": true,
+      "runAt": "idle",
+      "code": "(function(){var i=setInterval(function(){var b=document.querySelector('.ytp-ad-skip-button, .ytp-ad-skip-button-modern, .ytp-skip-ad-button, button[id^=\"skip-button\"]');if(b){b.click();clearInterval(i);}},300);setTimeout(function(){clearInterval(i);},30000);})();"
+    },
+    {
+      "id": "script-skip-ad-time",
+      "name": "Skip to end of ad video",
+      "enabled": true,
+      "runAt": "idle",
+      "code": "(function(){var i=setInterval(function(){var p=document.querySelector('.html5-video-player');if(p&&(p.classList.contains('ad-showing')||p.classList.contains('ad-interrupting'))){var v=p.querySelector('video');if(v&&v.duration&&isFinite(v.duration)){v.currentTime=v.duration;}}},500);setTimeout(function(){clearInterval(i);},60000);})();"
+    },
+    {
+      "id": "script-mute-ad",
+      "name": "Mute and speed up ads",
+      "enabled": true,
+      "runAt": "idle",
+      "code": "(function(){var i=setInterval(function(){var p=document.querySelector('.html5-video-player');if(p&&(p.classList.contains('ad-showing')||p.classList.contains('ad-interrupting'))){var v=p.querySelector('video');if(v){v.muted=true;if(v.playbackRate<16)v.playbackRate=16;}}else{var v2=document.querySelector('.html5-video-player video');if(v2&&v2.playbackRate>1&&v2.playbackRate>=16){v2.playbackRate=1;v2.muted=false;}}},500);})();"
+    },
+    {
+      "id": "script-dismiss-enforcement",
+      "name": "Dismiss ad-blocker enforcement popup",
+      "enabled": true,
+      "runAt": "idle",
+      "code": "(function(){var i=setInterval(function(){var e=document.querySelector('ytd-enforcement-message-view-model');if(e){var d=e.closest('tp-yt-paper-dialog')||e.closest('ytd-popup-container');if(d){var btn=d.querySelector('#dismiss-button, .dismiss-button, [aria-label=\"Close\"]');if(btn)btn.click();d.style.display='none';}e.style.display='none';var bg=document.querySelectorAll('tp-yt-iron-overlay-backdrop');bg.forEach(function(b){b.style.display='none';b.remove();});document.body.style.overflow='';var v=document.querySelector('video');if(v&&v.paused)v.play();}},1000);})();"
+    },
+    {
+      "id": "script-remove-ad-containers",
+      "name": "Remove ad containers from DOM",
+      "enabled": true,
+      "runAt": "idle",
+      "code": "(function(){setInterval(function(){var sels=['#player-ads','#masthead-ad','ytd-ad-slot-renderer','ytd-in-feed-ad-layout-renderer','ytd-banner-promo-renderer','ytd-promoted-sparkles-web-renderer'];sels.forEach(function(s){document.querySelectorAll(s).forEach(function(el){el.remove();});});},2000);})();"
+    }
+  ]
+}

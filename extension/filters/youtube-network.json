@@ -1,0 +1,82 @@
+{
+  "name": "YouTube Network Filters",
+  "version": "1.0.0",
+  "updated": "2026-02-12T00:00:00Z",
+  "rules": [
+    {
+      "id": "net-doubleclick",
+      "pattern": "||doubleclick.net",
+      "description": "DoubleClick ad network"
+    },
+    {
+      "id": "net-googlesyndication",
+      "pattern": "||googlesyndication.com",
+      "description": "Google ad syndication"
+    },
+    {
+      "id": "net-googleadservices",
+      "pattern": "||googleadservices.com",
+      "description": "Google ad services"
+    },
+    {
+      "id": "net-yt-stats-ads",
+      "pattern": "||youtube.com/api/stats/ads",
+      "description": "YouTube ad stats tracking"
+    },
+    {
+      "id": "net-yt-pagead",
+      "pattern": "||youtube.com/pagead/",
+      "description": "YouTube page ad endpoint"
+    },
+    {
+      "id": "net-yt-ptracking",
+      "pattern": "||youtube.com/ptracking",
+      "description": "YouTube player tracking"
+    },
+    {
+      "id": "net-yt-midroll",
+      "pattern": "||youtube.com/get_midroll_info",
+      "description": "YouTube mid-roll ad info"
+    },
+    {
+      "id": "net-yt-qoe-ad",
+      "pattern": "||youtube.com/api/stats/qoe?*adformat",
+      "description": "YouTube QoE ad format stats"
+    },
+    {
+      "id": "net-yt-generate204-ad",
+      "pattern": "||youtube.com/generate_204*ad",
+      "description": "YouTube ad beacon"
+    },
+    {
+      "id": "net-ad-youtube",
+      "pattern": "||ad.youtube.com",
+      "description": "YouTube ad subdomain"
+    },
+    {
+      "id": "net-ads-youtube",
+      "pattern": "||ads.youtube.com",
+      "description": "YouTube ads subdomain"
+    },
+    {
+      "id": "net-yt-companion",
+      "pattern": "||youtube.com/ad_companion",
+      "description": "YouTube companion ad"
+    },
+    {
+      "id": "net-yt-ad-break",
+      "pattern": "||youtube.com/youtubei/v1/player/ad_break",
+      "description": "YouTube ad break API"
+    },
+    {
+      "id": "net-googlevideo-ctier",
+      "pattern": "*googlevideo.com/videoplayback*&ctier=L*",
+      "description": "Google Video ad-tier playback"
+    },
+    {
+      "id": "net-static-doubleclick",
+      "pattern": "||static.doubleclick.net",
+      "description": "Static DoubleClick assets"
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "name": "YouTube Cosmetic Filters",
+  "version": "1.0.0",
+  "updated": "2026-02-12T00:00:00Z",
+  "rules": [
+    {
+      "id": "yt-overlay-container",
+      "selector": ".ytp-ad-overlay-container",
+      "description": "Video overlay ad container"
+    },
+    {
+      "id": "yt-overlay-slot",
+      "selector": ".ytp-ad-overlay-slot",
+      "description": "Video overlay ad slot"
+    },
+    {
+      "id": "yt-text-overlay",
+      "selector": ".ytp-ad-text-overlay",
+      "description": "Text-based video overlay ad"
+    },
+    {
+      "id": "yt-image-overlay",
+      "selector": ".ytp-ad-image-overlay",
+      "description": "Image-based video overlay ad"
+    },
+    {
+      "id": "yt-skip-container",
+      "selector": ".ytp-ad-skip-button-container",
+      "description": "Skip button container (hidden; we click it instead)"
+    },
+    {
+      "id": "yt-preview-container",
+      "selector": ".ytp-ad-preview-container",
+      "description": "Ad preview text (Ad in X seconds)"
+    },
+    {
+      "id": "yt-message-container",
+      "selector": ".ytp-ad-message-container",
+      "description": "Ad message overlay"
+    },
+    {
+      "id": "yt-player-overlay",
+      "selector": ".ytp-ad-player-overlay",
+      "description": "Full player ad overlay"
+    },
+    {
+      "id": "yt-player-overlay-info",
+      "selector": ".ytp-ad-player-overlay-instream-info",
+      "description": "In-stream ad info overlay"
+    },
+    {
+      "id": "yt-action-interstitial",
+      "selector": ".ytp-ad-action-interstitial",
+      "description": "Interstitial ad action overlay"
+    },
+    {
+      "id": "yt-action-interstitial-bg",
+      "selector": ".ytp-ad-action-interstitial-background-container",
+      "description": "Interstitial ad background"
+    },
+    {
+      "id": "yt-player-ads",
+      "selector": "#player-ads",
+      "description": "Player ads container"
+    },
+    {
+      "id": "yt-masthead-ad",
+      "selector": "#masthead-ad",
+      "description": "Masthead banner ad"
+    },
+    {
+      "id": "yt-ad-slot-rail",
+      "selector": "#ad-slot-rail",
+      "description": "Sidebar ad rail"
+    },
+    {
+      "id": "yt-ad-slot-renderer",
+      "selector": "ytd-ad-slot-renderer",
+      "description": "Generic ad slot renderer"
+    },
+    {
+      "id": "yt-banner-promo",
+      "selector": "ytd-banner-promo-renderer",
+      "description": "Banner promotion"
+    },
+    {
+      "id": "yt-statement-banner",
+      "selector": "ytd-statement-banner-renderer",
+      "description": "Statement banner ad"
+    },
+    {
+      "id": "yt-infeed-ad",
+      "selector": "ytd-in-feed-ad-layout-renderer",
+      "description": "In-feed ad in search/browse"
+    },
+    {
+      "id": "yt-promoted-sparkles",
+      "selector": "ytd-promoted-sparkles-web-renderer",
+      "description": "Promoted sparkles web ad"
+    },
+    {
+      "id": "yt-promoted-video",
+      "selector": "ytd-promoted-video-renderer",
+      "description": "Promoted video in feed"
+    },
+    {
+      "id": "yt-display-ad",
+      "selector": "ytd-display-ad-renderer",
+      "description": "Display ad renderer"
+    },
+    {
+      "id": "yt-compact-promoted",
+      "selector": "ytd-compact-promoted-video-renderer",
+      "description": "Compact promoted video in sidebar"
+    },
+    {
+      "id": "yt-companion-ad",
+      "selector": "ytd-action-companion-ad-renderer",
+      "description": "Companion ad next to video"
+    },
+    {
+      "id": "yt-engagement-ads",
+      "selector": "ytd-engagement-panel-section-list-renderer[target-id=\"engagement-panel-ads\"]",
+      "description": "Engagement panel ads section"
+    },
+    {
+      "id": "yt-search-pyv",
+      "selector": "ytd-search-pyv-renderer",
+      "description": "Search promoted video"
+    },
+    {
+      "id": "yt-promoted-search-text",
+      "selector": "ytd-promoted-sparkles-text-search-renderer",
+      "description": "Promoted text in search"
+    },
+    {
+      "id": "yt-search-pva",
+      "selector": "#search-pva",
+      "description": "Search PVA container"
+    },
+    {
+      "id": "yt-merch-shelf",
+      "selector": "ytd-merch-shelf-renderer",
+      "description": "Merch shelf under videos"
+    },
+    {
+      "id": "yt-movie-offer",
+      "selector": "ytd-movie-offer-module-renderer",
+      "description": "Movie offer/purchase module"
+    },
+    {
+      "id": "yt-enforcement-msg",
+      "selector": "ytd-enforcement-message-view-model",
+      "description": "Ad blocker enforcement message"
+    },
+    {
+      "id": "yt-popup-enforcement",
+      "selector": "ytd-popup-container:has(.ytd-enforcement-message-view-model)",
+      "description": "Popup containing enforcement message"
+    },
+    {
+      "id": "yt-ad-badge",
+      "selector": ".badge-style-type-ad",
+      "description": "Ad badge on promoted content"
+    },
+    {
+      "id": "yt-ad-hover-text",
+      "selector": ".ytp-ad-hover-text-container",
+      "description": "Ad hover text container"
+    },
+    {
+      "id": "yt-ad-survey",
+      "selector": ".ytp-ad-survey",
+      "description": "Ad feedback survey"
+    }
+  ]
+}

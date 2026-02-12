@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">🛡️ <span class="title">AdaBlock</span></div>
+      <div class="tagline">Ads adapt. So do we.</div>
+    </header>
+
+    <div class="toggle-row">
+      <span class="label">Protection</span>
+      <button id="toggle" class="toggle-btn enabled">ON</button>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-value" id="ads-blocked">0</span>
+        <span class="stat-label">Ads Blocked</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="popups-dismissed">0</span>
+        <span class="stat-label">Popups Dismissed</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="filter-count">0</span>
+        <span class="stat-label">Active Filters</span>
+      </div>
+    </div>
+
+    <div class="info">
+      <div class="info-row">
+        <span class="info-label">Version</span>
+        <span class="info-value" id="version">—</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Last Update</span>
+        <span class="info-value" id="last-update">—</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Filters</span>
+        <span class="info-value" id="breakdown">—</span>
+      </div>
+    </div>
+
+    <footer>
+      <span class="nostr-status" id="nostr-status">● Nostr: checking…</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

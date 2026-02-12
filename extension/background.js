@@ -23,11 +23,14 @@ const DEFAULT_STATS = {
 
 // Initialize on install
 chrome.runtime.onInstalled.addListener(async (details) => {
-  if (details.reason === 'install') {
+  if (details.reason === 'install' || details.reason === 'update') {
     await initializeFilters();
-    console.log('[AdaBlock] Extension installed, seed filters loaded');
+    console.log('[AdaBlock] Extension installed/updated, seed filters loaded');
   }
 });
+
+// Always ensure filters on service worker load (covers dev mode reloads)
+ensureFiltersLoaded().then(() => console.log('[AdaBlock] Filters verified on load'));
 
 // Initialize on startup
 chrome.runtime.onStartup.addListener(async () => {
@@ -133,6 +136,7 @@ async function getFilters() {
 }
 
 async function getStatus() {
+  await ensureFiltersLoaded();
   const data = await chrome.storage.local.get([
     STORAGE_KEYS.LAST_UPDATE,
     STORAGE_KEYS.FILTER_VERSION,
